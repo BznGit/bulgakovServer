@@ -100,4 +100,27 @@ document.addEventListener('DOMContentLoaded', function () {
             body.classList.remove('overflow');
         });
     });
+
+
+    
+
 });
+/*// получаем DOM-элемент слайдера
+const sliderElem = document.querySelector('.slider');
+// получаем его экземпляр класса ItcSlider
+const slider = ItcSlider.getInstance(sliderElem);
+slider.moveTo(5)
+console.log(slider.current())*/
+
+/*let globeIndex = 1;
+function currItem(arr){
+    globeIndex = arr.findIndex(elem=>elem==1);
+    console.log(globeIndex)
+    let count = document.querySelector('.counter') ;
+    console.log(count)
+    count.firstElementChild.textContent = globeIndex + 1
+}
+let buttons = document.querySelectorAll('.button .primary .green') ;
+console.log(buttons)
+
+export { currItem }*/

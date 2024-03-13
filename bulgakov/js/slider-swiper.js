@@ -1,3 +1,5 @@
+
+import {currItem} from './index.js'
 /**
  * @class ItcSlider
  * @version 1.0.0
@@ -123,10 +125,15 @@ class ItcSlider {
 
     moveTo(index) {
         this.#moveTo(index);
+       
     }
 
     reset() {
         this.#reset();
+    }
+
+    current(){
+        return this.#state.activeItems.findIndex(elem=>elem==1)
     }
 
     dispose() {
@@ -358,6 +365,7 @@ class ItcSlider {
     this.#state.elItems.dispatchEvent(new CustomEvent('itc-slider__transition-start', {
         bubbles: true
     }));
+    currItem(this.#state.activeItems)
 }
 
   #moveTo(index) {
@@ -447,3 +455,4 @@ class ItcSlider {
 }
 
 ItcSlider.createInstances();
+
